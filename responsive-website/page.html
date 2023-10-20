@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>birds</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                margin: 50px 50px 0 50px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            header {
+                font-size: 3rem;
+                font-weight: bold;
+                color: rgb(241, 181, 16);
+            }
+            h1 {
+                font-size: 4rem;
+            }
+            .main {
+                flex: 1;
+            }
+            #left {
+                float: left;
+            }
+            #right {
+                float: right;
+            }
+            .card {
+                width: 45%;
+            }
+            img {
+                float: left;
+                width: 150px;
+                height: 150px;
+                border-radius: 20px;
+                margin-right: 20px;
+            }
+        
+            footer {
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: right;     
+                margin-top: 30%;       
+            }
+            span, footer { 
+                color: midnightblue;
+            }
+            @media (max-width: 680px) {
+                header {
+                    text-align: center;
+                }
+                h1 {
+                  font-size: 3.5rem;
+                  text-align: center;
+                }
+                .card {
+                    width: 100%;
+                    display: block;
+                    margin-bottom: 30px;
+                    text-align: justify;
+                }
+                img {
+                    margin-bottom: 10px;
+                    width: 100%;
+                    display: inline;
+                    object-fit: cover;
+                }
+                footer {
+                    text-align: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main"> 
+            <header>birds.com</header>
+            <h1>Media queries <span>responsive website</span> about birds.</h1>
+            <div id="left" class="card">
+             <img src="./kingfisher.jpg">
+             <div class="text">
+                <h2>Kingfisher</h2>
+                <p>Kingfishers are a family, the Alcedinidae, of small to medium-sized,<br> brightly colored birds in the order Coraciiformes.</p>
+             </div>
+            </div>
+            <div id="right" class="card">
+             <img src="./robin.jpg">
+             <div class="text">
+                 <h2>Robin</h2>
+                 <p>The American robin is a migratory bird of the true thrush genus and Turdidae,<br> the wider thrush family.</p>
+             </div>
+            </div>
+        </div>
+       <footer><p>Create. Develop. Design.</p></footer>
+    </body>
+</html>
