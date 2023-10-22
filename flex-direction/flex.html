@@ -3,7 +3,44 @@
     <head>
         <meta charset="UTF-8">
         <title>flex</title>
+        <style>
+            div {
+                color: white;
+                font-weight: bolder;
+                padding: 5px;
+            }
+            #container {
+                display: inline-flex;
+                flex-direction: column;
+               
+            }
+            #red {
+                background-color: red;
+            }
+            #orange {
+                background-color: orange;
+            }
+            #yellow {
+                background-color: yellow;
+            }
+            #green {
+                background-color: green;
+            }
+            #blue {
+                background-color: blue;
+            }
+            #container > div {
+                flex-basis: 100px;
+            }
+        </style>
     </head>
     <body>
+        <div id="container">
+            <div id="red">Red</div>
+            <div id="orange">Orange</div>
+            <div id="yellow">Yellow</div>
+            <div id="green">Green</div>
+            <div id="blue">Blue</div>
+        </div>
     </body>
 </html>
