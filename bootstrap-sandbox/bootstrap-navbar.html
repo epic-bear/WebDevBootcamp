@@ -7,6 +7,16 @@
         rel="stylesheet" 
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
         crossorigin="anonymous">
+        <style>
+            body {
+                background-color: antiquewhite;
+            }
+            .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: .75rem;
+}
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -37,11 +47,66 @@
                 </ul>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
+                  <button class="btn btn-outline-success" type="submit">Check</button>
                 </form>
               </div>
             </div>
           </nav>
+
+          <div class="px-4 pt-5 my-5 text-center border-bottom">
+            <h1 class="display-4 fw-bold text-body-emphasis">Mountains facts</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">Mountains are large natural elevations of the earth’s surface that typically have a distinct peak.</p>
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">One more fact</button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact Us</button>
+              </div>
+            </div>
+            <div class="overflow-hidden" style="max-height: 30vh;">
+              <div class="container px-5">
+                <img src="../images/mountain.jpg" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+              </div>
+            </div>
+          </div>
+          
+          <div class="container px-4 py-5" id="featured-3">
+            <h2 class="pb-2 border-bottom">Columns with icons</h2>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+              <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                  1
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Forest facts</h3>
+                <p>Facts about forest.</p>
+                <a href="#" class="icon-link">
+                  Call to action
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </div>
+              <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    2
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Animals facts</h3>
+                <p>Facts about animals.</p>
+                <a href="#" class="icon-link">
+                  Call to action
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+              </div>
+              <div class="feature col">
+                <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                    3
+                </div>
+                <h3 class="fs-2 text-body-emphasis">Ocean facts</h3>
+                <p>Facts about ocean</p>
+                <a href="#" class="icon-link">
+                  Call to action
+                  <img src="../images/chevron-right.svg>">
+                </a>
+              </div>
+            </div>
+          </div>
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
           crossorigin="anonymous"></script>
     </body>
