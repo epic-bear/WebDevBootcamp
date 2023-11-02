@@ -1,14 +1,14 @@
 var gamePattern = [];
 var userClickedPattern = [];
 var buttonColors = ["red", "blue", "green", "yellow"];
-var level = 1;
+var level = 0;
 var started = false;
 
 $(document).keypress(function (e) {
   if (e.key === "a" && !started) {
     started = true;
-    $("h1").text("Level " + level);
     nextSequence();
+    $("h1").text("Level " + level); 
   }
 });
 
