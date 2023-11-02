@@ -59,8 +59,21 @@ function checkAnswer(currentLevel) {
 
 function finishTheGame() {
   new Audio("sounds/wrong.mp3").play();
+  $("h1").text("Game Over");
   $("body").addClass("game-over");
   setTimeout(function () {
+    $("h1").text("Press A Key to Start");
     $("body").removeClass("game-over");
-  }, 200);
+  }, 1000);
+  setTimeout(function () {
+    startOver();
+  }, 1000);
+}
+
+function startOver() {
+  $("h1").text("Press A Key to Start");
+  level = 0;
+  started = false;
+  gamePattern = [];
+  userClickedPattern = [];
 }
