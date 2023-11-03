@@ -1,11 +1,4 @@
-const fs =  require("fs");
+const generateName = require("sillyname");
+const superheroes = require('superheroes');
 
-fs.writeFile("message.txt", "Hello", (err) => {
-  if (err) throw err;
-  console.log("file saved");
-});
-
-fs.readFile("./message.txt","utf8", (err, data) => {
-  if (err) throw err;
-  console.log(data);
-});
+console.log(generateName() + " AKA " + superheroes.random());
