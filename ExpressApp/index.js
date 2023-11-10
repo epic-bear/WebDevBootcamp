@@ -7,15 +7,24 @@ import { fileURLToPath } from "url";
 const _dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
 const port = 3000;
+var result = "";
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(morgan("short"));
+
+function concatData(req, res, next) {
+  result = "Name: " + req.body["name"] + " Age: " + req.body["age"];
+  next();
+}
+
+app.use(concatData);
 
 app.get("/", (req, res) => {
   res.sendFile(_dirname + "/public/index.html");
 });
 
 app.post("/submit", (req, res) => {
-  res.send(`<p>${req.body["name"]} ${req.body["age"]}`);
+  res.send(`<p>${result}<p>`);
 });
 
 app.listen(port, () => {
