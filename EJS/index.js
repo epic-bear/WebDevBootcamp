@@ -33,12 +33,9 @@ app.get("/name", (req, res) => {
 })
 
 app.post("/name", (req, res) => {
-    const data = {
-        fName: req.body["fName"],
-        lName: req.body["lName"],
+    res.render("yourname.ejs", {
         nameLength: (req.body["fName"] + req.body["lName"]).length,
-    }
-    res.render("yourname.ejs", req.body);
+    });
 });
 
 app.listen(port, () => {
