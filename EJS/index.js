@@ -14,6 +14,16 @@ app.get("/", (req, res) => {
   });
 });
 
+app.get("/list", (req, res) => {
+  const data = {
+    title: "Items",
+    seconds: new Date().getSeconds(),
+    items: ["apple", "banana", "cherry"],
+    htmlContent: "<em>Some text</em>",
+  };
+  res.render("list.ejs", data);
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
 });
