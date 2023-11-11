@@ -24,6 +24,10 @@ app.get("/list", (req, res) => {
   res.render("list.ejs", data);
 });
 
+app.get("/name", (req, res) => {
+    res.render(yourname.ejs);
+})
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
 });
