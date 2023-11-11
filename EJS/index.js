@@ -29,11 +29,16 @@ app.get("/list", (req, res) => {
 });
 
 app.get("/name", (req, res) => {
-    res.render(yourname.ejs);
+    res.render("yourname.ejs");
 })
 
 app.post("/name", (req, res) => {
-
+    const data = {
+        fName: req.body["fName"],
+        lName: req.body["lName"],
+        nameLength: (req.body["fName"] + req.body["lName"]).length,
+    }
+    res.render("yourname.ejs", req.body);
 });
 
 app.listen(port, () => {
