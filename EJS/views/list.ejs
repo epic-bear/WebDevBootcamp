@@ -9,10 +9,9 @@
     <h2>Current seconds: seconds</h2>
     <% if (seconds % 2 ===0) { %>
     <ul>
-      <% for (let index = 0; index < items.length; index++) { %>
-      <li><%= items[index] %></li>
-
-      <% } %>
+      <% items.forEach(item => { %>
+      <li><%= item %></li>
+      <% }); %>
     </ul>
     <% } else { %>
     <p>No items to display</p>
