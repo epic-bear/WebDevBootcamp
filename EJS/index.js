@@ -1,10 +1,14 @@
 import express from "express";
 import ejs from "ejs";
+import bodyParser from "body-parser";
 
 const app = express();
 const port = 4000;
 let dayType = "a weekday";
 let advice = "it's time to work hard!";
+
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
   datOfTheWeek();
@@ -27,6 +31,10 @@ app.get("/list", (req, res) => {
 app.get("/name", (req, res) => {
     res.render(yourname.ejs);
 })
+
+app.post("/name", (req, res) => {
+
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
