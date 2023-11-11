@@ -7,7 +7,7 @@ const port = 4000;
 let dayType = "a weekday";
 let advice = "it's time to work hard!";
 
-
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
