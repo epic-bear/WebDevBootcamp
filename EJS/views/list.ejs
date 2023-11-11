@@ -7,13 +7,16 @@
   <body>
     <h1><%= title%></h1>
     <h2>Current seconds: seconds</h2>
+    <% if (seconds % 2 ===0) { %>
     <ul>
       <% for (let index = 0; index < items.length; index++) { %>
       <li><%= items[index] %></li>
 
       <% } %>
     </ul>
-    <%- htmlContent %>
+    <% } else { %>
+    <p>No items to display</p>
+    <% } %> <%- htmlContent %>
   </body>
   <footer>
     <p>Copyright © from footer</p>
