@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>LIST</title>
-    </head>
-    <body>
-    </body>
-    <footer>
-        <p>Copyright © from footer</p>
-    </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <title>LIST</title>
+  </head>
+  <body>
+    <h1><%= title%></h1>
+    <h2>Current seconds: seconds</h2>
+    <ul>
+      <% for (let index = 0; index < items.length; index++) { %>
+      <li><%= items[index] %></li>
+
+      <% } %>
+    </ul>
+    <%- htmlContent %>
+  </body>
+  <footer>
+    <p>Copyright © from footer</p>
+  </footer>
 </html>
