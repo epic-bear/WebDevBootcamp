@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const mongoose = require("mongoose");
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.use(
     extended: true,
   })
 );
+
+mongoose.connect("mongodb://localhost:27017" {useNewUrlParser: true});
 
 app.get("/", function (req, res) {
   res.render("home");
