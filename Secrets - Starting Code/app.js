@@ -13,7 +13,7 @@ app.use(
   })
 );
 
-mongoose.connect("mongodb://localhost:27017" {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost:27017", {useNewUrlParser: true});
 
 app.get("/", function (req, res) {
   res.render("home");
