@@ -34,6 +34,11 @@ app.get("/register", function (req, res) {
     res.render("register");
   });
 
+
+app.get("/logout", function (req, res) {
+
+});  
+
 app.post("/register", function (req, res) {
   const newUser = new User({
     email: req.body.username,
@@ -41,6 +46,23 @@ app.post("/register", function (req, res) {
   })
   newUser.save();
   res.render("secrets");
+});
+
+app.post("/login", function (req, res) {
+  const username = req.body.username;
+  const password = req.body.password;
+  User.findOne({email : username})
+ .then((user)=>{
+     if(user.password === password) {
+      res.render("secrets");
+     }
+     else{
+      console.log("Password is incorrect.");
+     }
+ })
+ .catch((err)=>{
+     console.log(err);
+ });
 });
 
 app.listen(3000, function(){
