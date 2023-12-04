@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "sillyname": "^0.1.0",
     "superheroes": "^3.0.0"
   }
